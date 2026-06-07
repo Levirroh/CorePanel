@@ -1,7 +1,12 @@
+import Message from "../assets/message";
+
 export default function Login() {
   return (
     <div className="w-screen h-screen bg-linear-to-tr from-slate-950 from-60% to-orange-700 bg-size-[200%_200%] animate-gradient text-slate-300
       flex items-center justify-center">
+
+      <Message title="Olá! Para realizar o login, utilize:" messages={["'admin' 'admin' para entrar como Admin", "'user' 'user' para entrar como User"]}/>
+
       <div className="flex flex-col h-[60vh] w-[22vw] rounded-4xl bg-slate-700/8 text-center p-5 items-center gap-6">
         <div className="flex flex-col w-full">
           <p className="text-sm">Seja Bem-vindo ao</p>
