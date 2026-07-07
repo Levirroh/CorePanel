@@ -7,17 +7,15 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  
+
   function checkCredentials() {
-    if (!!username || !!!username || username.length == 0) return false
-    if (!!password || !!!password || password.length == 0) return false
-    return true;
+    return username.trim().length > 0 && password.trim().length > 0;
   }
+  //as there is no backend, this will be the validation.
 
   function SubmitLogin() {
     if (!checkCredentials()) setError("Invalid Credentials...");
 
-    //as there is no backend, this will be the validation.
     if ((username == password && username == "admin") || (username == password && username == "user")) {
       setError("")
       sessionStorage.setItem("acessType", username);
