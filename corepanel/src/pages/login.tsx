@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Message from "../assets/message";
+import Message from "../assets/components/message";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {

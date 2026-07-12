@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { validateSession } from "../helpers/session_helper.tsx"
 import { ContactRound, Lock, Shield, ShieldHalf, User } from "lucide-react";
+import Navbar from "../assets/components/navbar.tsx";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -8,8 +9,9 @@ export default function Home() {
   const mainColor = "forestGreen"
 
   return (
-    <div className="h-screen w-full bg-slate-100 p-6 lg:p-14">
-      <div className="h-full grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className="h-screen w-full bg-slate-100 flex">
+      <Navbar isActive={false}/>
+      <div className="h-full grid grid-cols-1 sm:grid-cols-2 gap-6 w-full p-6 lg:p-14">
         <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
           <div className="h-full w-1/2 flex flex-col items-center justify-center text-2xl">
             <div>
