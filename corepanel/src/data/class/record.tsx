@@ -7,8 +7,8 @@ export interface IRecords {
   description: string,
   category: Record_category,
   status: Record_status,
-  ownerId: string,
-  createdAt: Date,
-  updatedAt: Date,
-  value: string,
+  ownerId: number,
+  createdAt: string,
+  updatedAt: string,
+  value: number,
 };

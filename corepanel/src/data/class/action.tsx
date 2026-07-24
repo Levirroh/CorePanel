@@ -6,9 +6,9 @@ export interface IActions {
   id: number,
   action: Actions,
   description: string,
-  userId: string,
+  userId: number,
   targetType: Target_type,
   targetId: number,
-  createdAt: Date,
+  createdAt: string,
   result: Result,
 };

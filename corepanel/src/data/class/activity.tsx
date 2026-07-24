@@ -6,7 +6,7 @@ export interface IActivity {
   type: Action_type,
   title: string,
   description: string,
-  createdAt: Date,
+  createdAt: string,
   userId: number,
   severity: Severity,
 };

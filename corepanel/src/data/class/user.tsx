@@ -9,6 +9,6 @@ export interface IUser {
   role: Role,
   status: User_status,
   profileImage: string,
-  createdAt: Date,
-  lastAccessAt: Date
+  createdAt: string,
+  lastAccessAt: string
 };

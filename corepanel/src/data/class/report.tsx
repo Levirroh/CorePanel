@@ -8,9 +8,9 @@ export interface IReport {
   description: string,
   type: Report_type,
   status: Report_status,
-  createdBy: string,
-  createdAt: Date,
-  generatedAt: Date,
+  createdByUserId: number,
+  createdAt: string,
+  generatedAt: string,
   fileFormat: File_type,
-  size: string,
+  size: number,
 };
