@@ -6,7 +6,7 @@
     "username": "admin",
     "role": 9,
     "status": 1,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-01T08:30:00",
     "lastAccessAt": "2026-07-24T09:42:00"
   },
@@ -17,7 +17,7 @@
     "username": "lia.monteiro",
     "role": 7,
     "status": 1,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-02T10:15:00",
     "lastAccessAt": "2026-07-24T08:12:00"
   },
@@ -28,7 +28,7 @@
     "username": "bruno.salles",
     "role": 3,
     "status": 1,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-03T14:20:00",
     "lastAccessAt": "2026-07-23T17:45:00"
   },
@@ -39,7 +39,7 @@
     "username": "nina.rocha",
     "role": 3,
     "status": 1,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-04T11:00:00",
     "lastAccessAt": "2026-07-22T16:30:00"
   },
@@ -50,7 +50,7 @@
     "username": "user",
     "role": 1,
     "status": 1,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-05T09:10:00",
     "lastAccessAt": "2026-07-24T07:55:00"
   },
@@ -61,9 +61,9 @@
     "username": "maya.torres",
     "role": 1,
     "status": 2,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-10T13:40:00",
-    "lastAccessAt": null
+    "lastAccessAt": ""
   },
   {
     "id": 7,
@@ -72,7 +72,7 @@
     "username": "igor.martins",
     "role": 1,
     "status": 0,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-11T15:25:00",
     "lastAccessAt": "2026-07-18T12:18:00"
   },
@@ -83,7 +83,7 @@
     "username": "helena.prado",
     "role": 1,
     "status": 3,
-    "profileImage": null,
+    "profileImage": "",
     "createdAt": "2026-07-12T16:50:00",
     "lastAccessAt": "2026-07-19T19:05:00"
   }

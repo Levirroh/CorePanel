@@ -9,7 +9,7 @@
     "createdAt": "2026-07-20T10:00:00",
     "generatedAt": "2026-07-20T10:03:00",
     "fileFormat": 1,
-    "sizeInKb": 842
+    "size": 842
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "createdAt": "2026-07-21T09:20:00",
     "generatedAt": "2026-07-21T09:22:00",
     "fileFormat": 3,
-    "sizeInKb": 416
+    "size": 416
   },
   {
     "id": 3,
@@ -31,9 +31,9 @@
     "status": 2,
     "createdByUserId": 3,
     "createdAt": "2026-07-22T14:15:00",
-    "generatedAt": null,
+    "generatedAt": "",
     "fileFormat": 2,
-    "sizeInKb": 0
+    "size": 0
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "createdAt": "2026-07-23T08:45:00",
     "generatedAt": "2026-07-23T08:49:00",
     "fileFormat": 1,
-    "sizeInKb": 1034
+    "size": 1034
   },
   {
     "id": 5,
@@ -55,8 +55,8 @@
     "status": 3,
     "createdByUserId": 1,
     "createdAt": "2026-07-23T16:00:00",
-    "generatedAt": null,
+    "generatedAt": "",
     "fileFormat": 2,
-    "sizeInKb": 0
+    "size": 0
   }
 ]
