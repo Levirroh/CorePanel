@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Relatório Mensal de Julho",
+    "description": "Resumo geral de usuários, registros e operações do mês.",
+    "type": 1,
+    "status": 1,
+    "createdByUserId": 2,
+    "createdAt": "2026-07-20T10:00:00",
+    "generatedAt": "2026-07-20T10:03:00",
+    "fileFormat": 1,
+    "size": 842
+  },
+  {
+    "id": 2,
+    "title": "Relatório de Usuários Ativos",
+    "description": "Listagem de usuários ativos, pendentes e bloqueados.",
+    "type": 2,
+    "status": 1,
+    "createdByUserId": 1,
+    "createdAt": "2026-07-21T09:20:00",
+    "generatedAt": "2026-07-21T09:22:00",
+    "fileFormat": 3,
+    "size": 416
+  },
+  {
+    "id": 3,
+    "title": "Relatório de Registros Pendentes",
+    "description": "Registros que ainda aguardam revisão.",
+    "type": 3,
+    "status": 2,
+    "createdByUserId": 3,
+    "createdAt": "2026-07-22T14:15:00",
+    "generatedAt": "",
+    "fileFormat": 2,
+    "size": 0
+  },
+  {
+    "id": 4,
+    "title": "Relatório Financeiro",
+    "description": "Consolidação de receitas, despesas e projeções.",
+    "type": 4,
+    "status": 1,
+    "createdByUserId": 2,
+    "createdAt": "2026-07-23T08:45:00",
+    "generatedAt": "2026-07-23T08:49:00",
+    "fileFormat": 1,
+    "size": 1034
+  },
+  {
+    "id": 5,
+    "title": "Relatório de Atividades",
+    "description": "Histórico recente de atividades do sistema.",
+    "type": 5,
+    "status": 3,
+    "createdByUserId": 1,
+    "createdAt": "2026-07-23T16:00:00",
+    "generatedAt": "",
+    "fileFormat": 2,
+    "size": 0
+  }
+]

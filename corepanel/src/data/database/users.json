@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Arthur Varela",
+    "email": "arthur.varela@corepanel.dev",
+    "username": "admin",
+    "role": 9,
+    "status": 1,
+    "profileImage": "",
+    "createdAt": "2026-07-01T08:30:00",
+    "lastAccessAt": "2026-07-24T09:42:00"
+  },
+  {
+    "id": 2,
+    "name": "Lia Monteiro",
+    "email": "lia.monteiro@corepanel.dev",
+    "username": "lia.monteiro",
+    "role": 7,
+    "status": 1,
+    "profileImage": "",
+    "createdAt": "2026-07-02T10:15:00",
+    "lastAccessAt": "2026-07-24T08:12:00"
+  },
+  {
+    "id": 3,
+    "name": "Bruno Salles",
+    "email": "bruno.salles@corepanel.dev",
+    "username": "bruno.salles",
+    "role": 3,
+    "status": 1,
+    "profileImage": "",
+    "createdAt": "2026-07-03T14:20:00",
+    "lastAccessAt": "2026-07-23T17:45:00"
+  },
+  {
+    "id": 4,
+    "name": "Nina Rocha",
+    "email": "nina.rocha@corepanel.dev",
+    "username": "nina.rocha",
+    "role": 3,
+    "status": 1,
+    "profileImage": "",
+    "createdAt": "2026-07-04T11:00:00",
+    "lastAccessAt": "2026-07-22T16:30:00"
+  },
+  {
+    "id": 5,
+    "name": "Caio Fernandes",
+    "email": "caio.fernandes@corepanel.dev",
+    "username": "user",
+    "role": 1,
+    "status": 1,
+    "profileImage": "",
+    "createdAt": "2026-07-05T09:10:00",
+    "lastAccessAt": "2026-07-24T07:55:00"
+  },
+  {
+    "id": 6,
+    "name": "Maya Torres",
+    "email": "maya.torres@corepanel.dev",
+    "username": "maya.torres",
+    "role": 1,
+    "status": 2,
+    "profileImage": "",
+    "createdAt": "2026-07-10T13:40:00",
+    "lastAccessAt": ""
+  },
+  {
+    "id": 7,
+    "name": "Igor Martins",
+    "email": "igor.martins@corepanel.dev",
+    "username": "igor.martins",
+    "role": 1,
+    "status": 0,
+    "profileImage": "",
+    "createdAt": "2026-07-11T15:25:00",
+    "lastAccessAt": "2026-07-18T12:18:00"
+  },
+  {
+    "id": 8,
+    "name": "Helena Prado",
+    "email": "helena.prado@corepanel.dev",
+    "username": "helena.prado",
+    "role": 1,
+    "status": 3,
+    "profileImage": "",
+    "createdAt": "2026-07-12T16:50:00",
+    "lastAccessAt": "2026-07-19T19:05:00"
+  }
+]

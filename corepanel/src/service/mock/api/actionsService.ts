@@ -1,0 +1,6 @@
+import type { IActions } from "../../../data/class/action";
+import actionsJson from "../../../data/database/actions.json";
+
+export function getActions(): IActions[] {
+  return actionsJson as IActions[];
+}

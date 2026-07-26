@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "type": 6,
+    "title": "Sessão iniciada",
+    "description": "Arthur Varela acessou o painel administrativo.",
+    "createdAt": "2026-07-24T09:42:00",
+    "userId": 1,
+    "severity": 1
+  },
+  {
+    "id": 2,
+    "type": 3,
+    "title": "Relatório gerado",
+    "description": "Relatório mensal de julho foi gerado com sucesso.",
+    "createdAt": "2026-07-24T09:10:00",
+    "userId": 2,
+    "severity": 2
+  },
+  {
+    "id": 3,
+    "type": 1,
+    "title": "Novo usuário cadastrado",
+    "description": "Maya Torres foi adicionada ao sistema.",
+    "createdAt": "2026-07-23T15:35:00",
+    "userId": 1,
+    "severity": 2
+  },
+  {
+    "id": 4,
+    "type": 5,
+    "title": "Permissão alterada",
+    "description": "Permissões de Bruno Salles foram atualizadas.",
+    "createdAt": "2026-07-23T11:20:00",
+    "userId": 1,
+    "severity": 3
+  },
+  {
+    "id": 5,
+    "type": 4,
+    "title": "Registro criado",
+    "description": "Novo registro financeiro foi criado.",
+    "createdAt": "2026-07-22T17:00:00",
+    "userId": 3,
+    "severity": 1
+  },
+  {
+    "id": 6,
+    "type": 8,
+    "title": "Alerta do sistema",
+    "description": "Tentativa de acesso bloqueada foi detectada.",
+    "createdAt": "2026-07-22T14:45:00",
+    "userId": 8,
+    "severity": 4
+  },
+  {
+    "id": 7,
+    "type": 2,
+    "title": "Usuário atualizado",
+    "description": "Dados cadastrais de Nina Rocha foram editados.",
+    "createdAt": "2026-07-21T10:30:00",
+    "userId": 2,
+    "severity": 1
+  },
+  {
+    "id": 8,
+    "type": 7,
+    "title": "Sessão encerrada",
+    "description": "Caio Fernandes saiu do painel.",
+    "createdAt": "2026-07-20T18:12:00",
+    "userId": 5,
+    "severity": 1
+  }
+]
