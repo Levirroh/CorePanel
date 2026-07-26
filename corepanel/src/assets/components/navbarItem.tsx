@@ -2,11 +2,15 @@ interface Props {
   url: string,
   title: string,
   Icon: React.ElementType,
-  isActive: boolean,
 }
 
 
-export default function NavbarItem({ url, title, Icon, isActive }: Props) {
+export default function NavbarItem({ url, title, Icon }: Props) {
+  const isActive = ("/" + window.location.href.split("/")[3]) == url;
+
+  console.log(isActive)
+  console.log(window.location.href.split("/")[3])
+  console.log(url)
 
   return (
     <a href={url}>
