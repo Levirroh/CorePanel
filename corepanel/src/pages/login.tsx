@@ -40,11 +40,11 @@ export default function Login() {
         <div>
           <div className="flex flex-col w-full text-left">
             <label htmlFor="" className="text-xs">Username:</label>
-            <input type="text" className="pl-3 bg-slate-400/5 pt-1 pb-2 rounded-md m-2 outline-none hover:scale-102 transition-all duration-100 text-slate-400" onChange={(e) => setUsername(e.target.value)} />
+            <input type="text" className="pl-3 text-md bg-slate-400/5 pt-1 pb-2 rounded-md m-2 outline-none hover:scale-102 transition-all duration-100 text-slate-400" onChange={(e) => setUsername(e.target.value)} />
           </div>
           <div className="flex flex-col w-full text-left">
             <label htmlFor="" className="text-xs">Password:</label>
-            <input type="password" className="pl-3 bg-slate-400/5 pt-1 pb-2 rounded-md m-2 outline-none hover:scale-102 transition-all duration-100 text-slate-400" onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" className="pl-3 text-md bg-slate-400/5 pt-1 pb-2 rounded-md m-2 outline-none hover:scale-102 transition-all duration-100 text-slate-400" onChange={(e) => setPassword(e.target.value)} />
           </div>
           <div className="flex flex-col w-full h-1/2 items-center justify-center text-left">
             <button className="flex w-3/4 h-3/5 bg-orange-800 text-center items-center justify-center font-bold rounded-2xl text-slate-400 shadow-2xs shadow-black" onClick={SubmitLogin}>Entrar</button>
