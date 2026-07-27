@@ -9,11 +9,11 @@ export default function Navbar({ isActive: boolean, activeMenu: Number }) {
       title: "Home",
       icon: Home
     },
-    {
-      url: "activities",
-      title: "Activities",
-      icon: NotebookPen
-    },
+    // {
+    //   url: "activities",
+    //   title: "Activities",
+    //   icon: NotebookPen
+    // },
     {
       url: "/reports",
       title: "Reports",
