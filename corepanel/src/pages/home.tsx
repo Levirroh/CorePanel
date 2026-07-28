@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { validateSession } from "../helpers/session_helper.tsx"
 import { ContactRound, Lock, Shield, ShieldHalf, User } from "lucide-react";
+import ActionsContainer from "../assets/components/containers/actionsContainer.tsx";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ export default function Home() {
         </div>
         <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 lg:col-span-2`}>
           <p>Ações rápidas</p>
+          <ActionsContainer />
         </div>
       </div>
     </div>
