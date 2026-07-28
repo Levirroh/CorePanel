@@ -36,13 +36,13 @@ export default function Home() {
         <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
           <p>Atualizações recentes</p>
         </div>
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
+        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>Visualizar Dados</p>
         </div>
         <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
           <p>Usuários</p>
         </div>
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 lg:col-span-2`}>
+        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 col-span-2 h-full flex flex-col`}>
           <p>Ações rápidas</p>
           <ActionsContainer />
         </div>
