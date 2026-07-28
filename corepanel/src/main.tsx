@@ -8,6 +8,7 @@ import Home from './pages/home.js';
 import Records from './pages/records.js';
 import Reports from './pages/reports.js';
 import Users from './pages/users.js';
+import Interface from './pages/interface';
 
 const router = createBrowserRouter([
   {
@@ -17,21 +18,18 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Login />,
-      },{
+      }, {
         path: '/login',
         element: <Login />,
-      },{
-        path: "/home",
-        element: <Home/>
-      },{
-        path: "/records",
-        element: <Records/>
-      },{
-        path: "/reports",
-        element: <Reports/>
-      },{
-        path: "/users",
-        element: <Users/>
+      }, {
+        path: "/",
+        element: <Interface />,
+        children: [
+          { path: "home", Component: Home },
+          { path: "records", Component: Records },
+          { path: "reports", Component: Reports },
+          { path: "users", Component: Users },
+        ]
       }
     ],
   },
