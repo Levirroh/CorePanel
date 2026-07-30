@@ -16,7 +16,7 @@ export default function Home() {
             <div>
               <User size={100} color={mainColor} />
             </div>
-            <p className="text-center">Seja bem-vindo {user.charAt(0).toUpperCase() + user.slice(1).toLowerCase()}</p>
+            <p className="text-center">Seja bem-vindo {(user?.charAt(0)?.toUpperCase() ?? "Usuário não encontrado") + user?.slice(1)?.toLowerCase()}</p>
           </div>
           <div className="h-full w-1/2 flex flex-col items-start justify-evenly text-lg">
             <div className="flex items-center">
