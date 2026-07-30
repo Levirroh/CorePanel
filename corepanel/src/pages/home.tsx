@@ -9,9 +9,9 @@ export default function Home() {
   const mainColor = "forestGreen"
 
   return (
-    <div className="h-screen w-full bg-slate-100 flex">
+    <div className="h-screen w-full bg-slate-200 flex">
       <div className="h-full grid grid-cols-1 sm:grid-cols-2 gap-6 w-full p-6 lg:p-14">
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex`}>
           <div className="h-full w-1/2 flex flex-col items-center justify-center text-xl">
             <div>
               <User size={100} color={mainColor} />
@@ -33,16 +33,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex`}>
           <p>Atualizações recentes</p>
         </div>
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex flex-col`}>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>Visualizar Dados</p>
         </div>
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 flex`}>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex`}>
           <p>Usuários</p>
         </div>
-        <div className={`bg-slate-200 rounded-4xl p-6 border-2 border-slate-300 col-span-2 h-full flex flex-col`}>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 col-span-2 h-full flex flex-col`}>
           <p>Ações rápidas</p>
           <ActionsContainer />
         </div>
