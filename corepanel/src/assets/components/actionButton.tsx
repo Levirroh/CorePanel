@@ -17,7 +17,7 @@ export default function ActionButton({ url, title, desc, color, textColor, borde
           {Icon && (
             <Icon className={`h-12 w-12 ${textColor}`} />
           )}
-          <p className="font-semibold text-[20px] text-black">{title}</p>
+          <p className={`font-semibold text-[20px] ${textColor}`}>{title}</p>
           <p className="text-slate-800 font-medium">{desc}</p>
         </div>
       </div>

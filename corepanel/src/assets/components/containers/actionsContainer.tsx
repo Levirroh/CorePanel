@@ -1,5 +1,5 @@
 import { ChartNoAxesCombined, FileExclamationPoint, LineChart, LucideUserPlus, ScrollText, User } from "lucide-react";
-import ActionButton from "../action";
+import ActionButton from "../actionButton";
 
 export default function ActionsContainer() {
 
