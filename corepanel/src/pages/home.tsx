@@ -40,7 +40,7 @@ export default function Home() {
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>Visualizar Dados</p>
         </div>
-        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex`}>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>Usuários</p>
           <UsersHomeContainer />
         </div>
