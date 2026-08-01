@@ -5,9 +5,7 @@ interface Props {
 
 export default function UserPictureContainer({imagePath}: Props) {
   return (
-      <div className="">
           <img src={imagePath} alt=""
-          className="h-32 w-32" />
-      </div>
+          className="h-20 w-20 rounded-4xl" />
   );
 }
