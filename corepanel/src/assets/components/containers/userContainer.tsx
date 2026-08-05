@@ -1,5 +1,6 @@
 import type { IUser } from "../../../data/class/user";
 import { formatDate } from "../../../helpers/formater_helper";
+import { getUserImage } from "../../../helpers/path_helper";
 import UserPictureContainer from "./userPictureContainer"
 
 interface UserProp {
@@ -9,7 +10,7 @@ interface UserProp {
 export default function UserContainer({user}: UserProp) {
   return (
     <div className="bg-slate-100 rounded-xl p-6 border-2 w-full border-slate-200 flex relative">
-      <UserPictureContainer imagePath={user.profileImage} />
+      <UserPictureContainer imagePath={getUserImage(user.profileImage)} />
       <div className="p-2">
         <p className="font-semibold text-[0.7vw]">{user.name}</p>
         <p className="text-slate-700">{user.role}</p>
