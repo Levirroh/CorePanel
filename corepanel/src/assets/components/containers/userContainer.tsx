@@ -1,4 +1,5 @@
 import type { IUser } from "../../../data/class/user";
+import { formatDate } from "../../../helpers/formater_helper";
 import UserPictureContainer from "./userPictureContainer"
 
 interface UserProp {
@@ -14,7 +15,7 @@ export default function UserContainer({user}: UserProp) {
         <p className="text-slate-700">{user.role}</p>
       </div>
       <div className="absolute bottom-2 right-4 text-slate-700">
-        <p>Último acesso às {user.lastAccessAt}</p>
+        <p>Last acess: {formatDate(user.lastAccessAt)}</p>
       </div>
     </div>
   );
