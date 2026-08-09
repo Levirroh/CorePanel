@@ -8,7 +8,7 @@ export default function LastActionsHomeContainer() {
   const users = userService();
 
   return (
-    <div className={`flex flex-col`}>
+    <div className={`flex flex-col gap-2`}>
       <LastActionsContainer action={actions[0]} user={users.findLast(x => x.id == actions[0].userId)}/>
       <LastActionsContainer action={actions[1]} user={users.findLast(x => x.id == actions[1].userId)}/>
       <LastActionsContainer action={actions[2]} user={users.findLast(x => x.id == actions[2].userId)}/>

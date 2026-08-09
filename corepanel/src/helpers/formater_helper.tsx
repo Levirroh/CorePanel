@@ -5,7 +5,7 @@ export function formatDate(date: string) {
 
   data = data.split("-")[2] + "/" + data.split("-")[1];
 
-  var retorno = data + " at " + horario;
+  var retorno = data + " at " + horario.split(":")[0] + ":" + horario.split(":")[1];
 
   return retorno;
 }
