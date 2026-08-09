@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import { validateSession } from "../helpers/session_helper.tsx"
-import { ContactRound, Lock, Shield, ShieldHalf, User } from "lucide-react";
+import { ContactRound, Lock, ShieldHalf, User } from "lucide-react";
 import ActionsContainer from "../assets/components/containers/actionsContainer.tsx";
 import UsersHomeContainer from "../assets/components/containers/usersHomeContainer.tsx";
+import LastActionsHomeContainer from "../assets/components/containers/lastActionsHomeContainer.tsx";
 
 export default function Home() {
-  const navigate = useNavigate();
   const user = validateSession();
   const mainColor = "forestGreen"
 
@@ -34,8 +33,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex`}>
-          <p>Atualizações recentes</p>
+        <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
+          <p>Últimas Ações</p>
+          <LastActionsHomeContainer />
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>Visualizar Dados</p>
