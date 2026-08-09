@@ -2,7 +2,7 @@
   {
     "id": 1,
     "action": 5,
-    "description": "Realizou login no sistema.",
+    "description": "Logged into the system.",
     "userId": 1,
     "targetType": 4,
     "targetId": null,
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "action": 7,
-    "description": "Gerou o relatório mensal de julho.",
+    "description": "Generated a monthly report based on july.",
     "userId": 2,
     "targetType": 3,
     "targetId": 1,
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "action": 1,
-    "description": "Criou o usuário Maya Torres.",
+    "description": "Created user Maya Torres.",
     "userId": 1,
     "targetType": 1,
     "targetId": 6,
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "action": 8,
-    "description": "Alterou permissões de Bruno Salles.",
+    "description": "Updated Bruno Salles permissions.",
     "userId": 1,
     "targetType": 1,
     "targetId": 3,
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "action": 1,
-    "description": "Criou um novo registro financeiro.",
+    "description": "Created a new financial record.",
     "userId": 3,
     "targetType": 2,
     "targetId": 6,
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "action": 5,
-    "description": "Tentativa de login bloqueada.",
+    "description": "Log in attempt fail.",
     "userId": 8,
     "targetType": 4,
     "targetId": null,
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "action": 2,
-    "description": "Atualizou dados de Nina Rocha.",
+    "description": "Updated Nina Rocha data.",
     "userId": 2,
     "targetType": 1,
     "targetId": 4,
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "action": 6,
-    "description": "Encerrou a sessão.",
+    "description": "Ended the session.",
     "userId": 5,
     "targetType": 4,
     "targetId": null,
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "action": 4,
-    "description": "Exportou registros operacionais.",
+    "description": "Exported operational records.",
     "userId": 4,
     "targetType": 2,
     "targetId": 11,
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "action": 3,
-    "description": "Tentou excluir um registro sem permissão.",
+    "description": "Tried to exclude a registry without required permissions.",
     "userId": 7,
     "targetType": 2,
     "targetId": 8,
