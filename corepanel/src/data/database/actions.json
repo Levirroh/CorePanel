@@ -2,7 +2,7 @@
   {
     "id": 1,
     "action": 5,
-    "description": "Arthur Varela realizou login no sistema.",
+    "description": "Realizou login no sistema.",
     "userId": 1,
     "targetType": 4,
     "targetId": null,
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "action": 7,
-    "description": "Lia Monteiro gerou o relatório mensal de julho.",
+    "description": "Gerou o relatório mensal de julho.",
     "userId": 2,
     "targetType": 3,
     "targetId": 1,
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "action": 1,
-    "description": "Arthur Varela criou o usuário Maya Torres.",
+    "description": "Criou o usuário Maya Torres.",
     "userId": 1,
     "targetType": 1,
     "targetId": 6,
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "action": 8,
-    "description": "Arthur Varela alterou permissões de Bruno Salles.",
+    "description": "Alterou permissões de Bruno Salles.",
     "userId": 1,
     "targetType": 1,
     "targetId": 3,
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "action": 1,
-    "description": "Bruno Salles criou um novo registro financeiro.",
+    "description": "Criou um novo registro financeiro.",
     "userId": 3,
     "targetType": 2,
     "targetId": 6,
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "action": 5,
-    "description": "Tentativa de login bloqueada para Helena Prado.",
+    "description": "Tentativa de login bloqueada.",
     "userId": 8,
     "targetType": 4,
     "targetId": null,
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "action": 2,
-    "description": "Lia Monteiro atualizou dados de Nina Rocha.",
+    "description": "Atualizou dados de Nina Rocha.",
     "userId": 2,
     "targetType": 1,
     "targetId": 4,
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "action": 6,
-    "description": "Caio Fernandes encerrou a sessão.",
+    "description": "Encerrou a sessão.",
     "userId": 5,
     "targetType": 4,
     "targetId": null,
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "action": 4,
-    "description": "Nina Rocha exportou registros operacionais.",
+    "description": "Exportou registros operacionais.",
     "userId": 4,
     "targetType": 2,
     "targetId": 11,
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "action": 3,
-    "description": "Igor Martins tentou excluir um registro sem permissão.",
+    "description": "Tentou excluir um registro sem permissão.",
     "userId": 7,
     "targetType": 2,
     "targetId": 8,
