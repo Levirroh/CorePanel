@@ -1,7 +1,7 @@
-import { Archive, FileExclamationPoint, Home, LogOut, NotebookPen, Users } from "lucide-react";
+import { Archive, FileExclamationPoint, Home, LogOut, Users } from "lucide-react";
 import NavbarItem from "./navbarItem";
 
-export default function Navbar({ isActive: boolean, activeMenu: Number }) {
+export default function Navbar() {
 
   const pages = [
     {
@@ -9,11 +9,6 @@ export default function Navbar({ isActive: boolean, activeMenu: Number }) {
       title: "Home",
       icon: Home
     },
-    // {
-    //   url: "activities",
-    //   title: "Activities",
-    //   icon: NotebookPen
-    // },
     {
       url: "/reports",
       title: "Reports",
