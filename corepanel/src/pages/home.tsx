@@ -16,36 +16,36 @@ export default function Home() {
             <div>
               <User size={100} color={mainColor} />
             </div>
-            <p className="text-center">Seja bem-vindo {(user?.charAt(0)?.toUpperCase() ?? "Usuário não encontrado") + user?.slice(1)?.toLowerCase()}</p>
+            <p className="text-center">Welcome {(user?.charAt(0)?.toUpperCase() ?? "Usuário não encontrado") + user?.slice(1)?.toLowerCase()}</p>
           </div>
           <div className="h-full w-1/2 flex flex-col items-start justify-evenly text-lg">
             <div className="flex items-center">
               <ContactRound size={26} color={mainColor} />
-              <p>Perfil: {user}</p>
+              <p>Profile: {user}</p>
             </div>
             <div className="flex items-center">
               <ShieldHalf size={26} color={mainColor} />
-              <p>Status da sessão: Ativa</p>
+              <p>Session: Active</p>
             </div>
             <div className="flex items-center">
               <Lock size={26} color={mainColor} />
-              <p>Permissões: Total</p>
+              <p>Permissions: All</p>
             </div>
           </div>
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
-          <p>Últimas Ações</p>
+          <p>Last Actions</p>
           <LastActionsHomeContainer />
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
-          <p>Visualizar Dados</p>
+          <p>View Data</p>
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
-          <p>Usuários</p>
+          <p>Users</p>
           <UsersHomeContainer />
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 col-span-2 h-full flex flex-col`}>
-          <p>Ações rápidas</p>
+          <p>Quick Actions</p>
           <ActionsContainer />
         </div>
       </div>
