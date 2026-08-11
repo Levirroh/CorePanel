@@ -40,7 +40,7 @@
     "title": "Relatório Financeiro",
     "description": "Consolidação de receitas, despesas e projeções.",
     "type": 4,
-    "status": 1,
+    "status": 4,
     "createdByUserId": 2,
     "createdAt": "2026-07-23T08:45:00",
     "generatedAt": "2026-07-23T08:49:00",
