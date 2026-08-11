@@ -3,6 +3,7 @@ import { ContactRound, Lock, ShieldHalf, User } from "lucide-react";
 import ActionsContainer from "../assets/components/containers/actionsContainer.tsx";
 import UsersHomeContainer from "../assets/components/containers/usersHomeContainer.tsx";
 import LastActionsHomeContainer from "../assets/components/containers/lastActionsHomeContainer.tsx";
+import ViewDataHomeContainer from "../assets/components/containers/viewDataHomeContainer.tsx";
 
 export default function Home() {
   const user = validateSession();
@@ -39,6 +40,7 @@ export default function Home() {
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>View Data</p>
+          <ViewDataHomeContainer />
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
           <p>Users</p>
