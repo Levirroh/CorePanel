@@ -87,32 +87,34 @@ export default function ViewDataHomeContainer() {
 
   const handleChange = (event: SelectChangeEvent) => {
     setGraphType(event.target.value as string);
-
+    console.log(graphType)
     switch (graphType) {
-      case "1":
+      case "reportTypes":
         setDataGraph(reportTypesGraph)
         break;
-      case "2":
+      case "actionTypes":
         setDataGraph(actionTypesGraph)
         break;
-      case "3":
+      case "activityTypes":
         setDataGraph(activityTypesGraph)
         break;
-      case "4":
+      case "recordCategories":
         setDataGraph(recordCategoriesGraph)
         break;
-      case "5":
+      case "reportStatus":
         setDataGraph(reportStatusGraph)
         break;
-      case "6":
+      case "userStatus":
         setDataGraph(userStatusGraph)
         break;
-      case "7":
-        break;
+      case "userRoles":
         setDataGraph(userRolesGraph)
+        break;
       default:
         setDataGraph(reportTypesGraph)
     }
+    console.log(dataGraph);
+
   };
 
   const settings = {
@@ -123,40 +125,78 @@ export default function ViewDataHomeContainer() {
   };
 
   return (
-    <div className={`flex gap-2`}>
-      <FormControl fullWidth>
-        <InputLabel id="data-visualization-label">Data visualization</InputLabel>
-        <Select
-          labelId="data-visualization"
-          id="data-visualization"
-          value={graphType}
-          label="Data visualization"
-          onChange={handleChange}
-        >
-          <MenuItem value={1}>Report types</MenuItem>
-          <MenuItem value={2}>Action types</MenuItem>
-          <MenuItem value={3}>Activity types</MenuItem>
-          <MenuItem value={4}>Record Categories</MenuItem>
-          <MenuItem value={5}>Report Status</MenuItem>
-          <MenuItem value={6}>User Status</MenuItem>
-          <MenuItem value={7}>User Roles</MenuItem>
-        </Select>
-      </FormControl>
-      <PieChart series={[
-        {
-          data: [...dataGraph],
-          innerRadius: 50,
-          outerRadius: 100,
-          paddingAngle: 3,
-          cornerRadius: 8,
-          startAngle: 0,
-          endAngle: 360,
-          cx: 95,
-          cy: 95,
-        }
-      ]}
-        {...settings}
-      />
+    <div className={`flex flex-col gap-2 h-full`}>
+      <div className='flex justify-between w-full'>
+        <p>View Data</p>
+        <div className='flex justify-evenly gap-4 w-1/2'>
+          <FormControl className='w-full'>
+            <InputLabel id="data-visualization-label">Graph data visualization</InputLabel>
+            <Select
+              labelId="data-visualization"
+              id="data-visualization"
+              value={graphType}
+              label="Graph data visualization"
+              onChange={handleChange}
+            >
+              <MenuItem value={"reportTypes"}>Report types</MenuItem>
+              <MenuItem value={"actionTypes"}>Action types</MenuItem>
+              <MenuItem value={"activityTypes"}>Activity types</MenuItem>
+              <MenuItem value={"recordCategories"}>Record Categories</MenuItem>
+              <MenuItem value={"reportStatus"}>Report Status</MenuItem>
+              <MenuItem value={"userStatus"}>User Status</MenuItem>
+              <MenuItem value={"userRoles"}>User Roles</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl className='w-full'>
+            <InputLabel >Graph data visualization</InputLabel>
+            <Select
+              value={"test"}
+              label="Selet period"
+            >
+              <MenuItem value={"today"}>Today</MenuItem>
+              <MenuItem value={"week"}>This week</MenuItem>
+              <MenuItem value={"month"}>This month</MenuItem>
+              <MenuItem value={"year"}>This year</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+      </div>
+      <div className='h-full w-full flex items-center justify-center'>
+        <div>
+
+          <PieChart series={[
+            {
+              data: [...dataGraph],
+              innerRadius: 50,
+              outerRadius: 100,
+              paddingAngle: 3,
+              cornerRadius: 8,
+              startAngle: 0,
+              endAngle: 360,
+              cx: 95,
+              cy: 95,
+            }
+          ]}
+            {...settings}
+          />
+        </div>
+        <div>
+          <p>each item description and value </p>
+          <p>color area             value (percentage) </p>
+        </div>
+
+      </div>
+
+      <div>
+        <p>quick actions on graph (change parameter, see other characteristics</p>
+{/* Maybe you select only the type (report, action, etc.) and then you select here for type, category, etc. */}
+      </div>
     </div>
   );
 }
+
+/*
+Other notes: 
+- When hovering right menu, make the respective data hover too
+*/

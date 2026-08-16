@@ -39,7 +39,6 @@ export default function Home() {
           <LastActionsHomeContainer />
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
-          <p>View Data</p>
           <ViewDataHomeContainer />
         </div>
         <div className={`bg-slate-100 rounded-xl p-6 border-2 border-slate-300 flex flex-col`}>
