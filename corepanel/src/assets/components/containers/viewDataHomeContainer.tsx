@@ -115,7 +115,6 @@ export default function ViewDataHomeContainer() {
     }
   };
 
-
   const settings = {
     margin: { right: 5 },
     width: 200,
