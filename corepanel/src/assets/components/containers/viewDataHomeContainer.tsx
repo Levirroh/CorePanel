@@ -83,6 +83,7 @@ export default function ViewDataHomeContainer() {
   ];
 
   const [graphType, setGraphType] = useState('');
+  const [graphPeriod, setGraphPeriod] = useState('');
   const [dataGraph, setDataGraph] = useState(reportTypesGraph);
 
 
@@ -116,6 +117,7 @@ export default function ViewDataHomeContainer() {
   };
 
   const handleChangePeriod = (event: SelectChangeEvent) => {
+    setGraphPeriod(event.target.value as string);
   };
 
   const settings = {
@@ -129,7 +131,7 @@ export default function ViewDataHomeContainer() {
     <div className={`flex flex-col gap-2 h-full`}>
       <div className='flex justify-between w-full'>
         <p>View Data</p>
-        <div className='flex justify-evenly gap-4 w-1/2'>
+        <div className='flex justify-evenly gap-4 w-3/4'>
           <FormControl className='w-full'>
             <InputLabel id="data-visualization-label">Graph data visualization</InputLabel>
             <Select
@@ -148,12 +150,12 @@ export default function ViewDataHomeContainer() {
               <MenuItem value={"userRoles"}>User Roles</MenuItem>
             </Select>
           </FormControl>
-          <FormControl className='w-full'>
+          <FormControl className='w-1/3'>
             <InputLabel id="data-period-label">Data Period</InputLabel>
             <Select
               labelId="data-period"
               id="data-period"
-              value={"today"}
+              value={graphPeriod}
               label="Data Period"
               onChange={handleChangePeriod}
             >
@@ -183,10 +185,10 @@ export default function ViewDataHomeContainer() {
             {...settings}
           />
         </div>
-        <div className='w-full flex flex-col'>
+        <div className='w-full flex flex-col gap-2'>
           {dataGraph.map((item) => (
             <div>
-              <GraphItemContainer item={item} total={dataGraph.reduce((accumulator, currentValue) => accumulator += currentValue.value, 0)}/>
+              <GraphItemContainer item={item} total={dataGraph.reduce((accumulator, currentValue) => accumulator += currentValue.value, 0)} />
             </div>
           ))}
         </div>
