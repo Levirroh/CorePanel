@@ -6,6 +6,7 @@ import getActions from '../../../service/mock/api/actionsService';
 import { getActivities } from '../../../service/mock/api/activitiesService';
 import { getRecords } from '../../../service/mock/api/recordsService';
 import getUsers from '../../../service/mock/api/userService';
+import GraphItemContainer from './GraphItemContainer';
 
 export default function ViewDataHomeContainer() {
   const reports = getReports();
@@ -85,9 +86,8 @@ export default function ViewDataHomeContainer() {
   const [dataGraph, setDataGraph] = useState(reportTypesGraph);
 
 
-  const handleChange = (event: SelectChangeEvent) => {
+  const handleChangeDataVisualization = (event: SelectChangeEvent) => {
     setGraphType(event.target.value as string);
-    console.log(graphType)
     switch (graphType) {
       case "reportTypes":
         setDataGraph(reportTypesGraph)
@@ -113,8 +113,9 @@ export default function ViewDataHomeContainer() {
       default:
         setDataGraph(reportTypesGraph)
     }
-    console.log(dataGraph);
+  };
 
+  const handleChangePeriod = (event: SelectChangeEvent) => {
   };
 
   const settings = {
@@ -136,7 +137,7 @@ export default function ViewDataHomeContainer() {
               id="data-visualization"
               value={graphType}
               label="Graph data visualization"
-              onChange={handleChange}
+              onChange={handleChangeDataVisualization}
             >
               <MenuItem value={"reportTypes"}>Report types</MenuItem>
               <MenuItem value={"actionTypes"}>Action types</MenuItem>
@@ -148,10 +149,13 @@ export default function ViewDataHomeContainer() {
             </Select>
           </FormControl>
           <FormControl className='w-full'>
-            <InputLabel >Graph data visualization</InputLabel>
+            <InputLabel id="data-period-label">Data Period</InputLabel>
             <Select
-              value={"test"}
-              label="Selet period"
+              labelId="data-period"
+              id="data-period"
+              value={"today"}
+              label="Data Period"
+              onChange={handleChangePeriod}
             >
               <MenuItem value={"today"}>Today</MenuItem>
               <MenuItem value={"week"}>This week</MenuItem>
@@ -160,11 +164,9 @@ export default function ViewDataHomeContainer() {
             </Select>
           </FormControl>
         </div>
-
       </div>
-      <div className='h-full w-full flex items-center justify-center'>
-        <div>
-
+      <div className='h-full w-full flex items-center'>
+        <div className='w-full flex'>
           <PieChart series={[
             {
               data: [...dataGraph],
@@ -181,16 +183,19 @@ export default function ViewDataHomeContainer() {
             {...settings}
           />
         </div>
-        <div>
-          <p>each item description and value </p>
-          <p>color area             value (percentage) </p>
+        <div className='w-full flex flex-col'>
+          {dataGraph.map((item) => (
+            <div>
+              <GraphItemContainer item={item} total={dataGraph.reduce((item, atual) => item + atual, 0)}/>
+            </div>
+          ))}
         </div>
 
       </div>
 
       <div>
         <p>quick actions on graph (change parameter, see other characteristics</p>
-{/* Maybe you select only the type (report, action, etc.) and then you select here for type, category, etc. */}
+        {/* Maybe you select only the type (report, action, etc.) and then you select here for type, category, etc. */}
       </div>
     </div>
   );
