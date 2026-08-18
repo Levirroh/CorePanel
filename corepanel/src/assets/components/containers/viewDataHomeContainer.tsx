@@ -186,7 +186,7 @@ export default function ViewDataHomeContainer() {
         <div className='w-full flex flex-col'>
           {dataGraph.map((item) => (
             <div>
-              <GraphItemContainer item={item} total={dataGraph.reduce((item, atual) => item + atual, 0)}/>
+              <GraphItemContainer item={item} total={dataGraph.reduce((accumulator, currentValue) => accumulator += currentValue.value, 0)}/>
             </div>
           ))}
         </div>
