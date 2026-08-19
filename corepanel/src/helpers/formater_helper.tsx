@@ -9,3 +9,7 @@ export function formatDate(date: string) {
 
   return retorno;
 }
+
+export function capitalFirstLetter(data: string){
+  return data != null ? data?.charAt(0)?.toUpperCase() + data?.slice(1)?.toLowerCase() : "Dado não encontrado";
+}

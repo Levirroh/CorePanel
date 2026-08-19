@@ -4,6 +4,7 @@ import ActionsContainer from "../assets/components/containers/actionsContainer.t
 import UsersHomeContainer from "../assets/components/containers/usersHomeContainer.tsx";
 import LastActionsHomeContainer from "../assets/components/containers/lastActionsHomeContainer.tsx";
 import ViewDataHomeContainer from "../assets/components/containers/viewDataHomeContainer.tsx";
+import { capitalFirstLetter } from "../helpers/formater_helper.tsx";
 
 export default function Home() {
   const user = validateSession();
@@ -17,12 +18,12 @@ export default function Home() {
             <div>
               <User size={100} color={mainColor} />
             </div>
-            <p className="text-center">Welcome {(user?.charAt(0)?.toUpperCase() ?? "Usuário não encontrado") + user?.slice(1)?.toLowerCase()}</p>
+            <p className="text-center">Welcome {capitalFirstLetter(user)}</p>
           </div>
           <div className="h-full w-1/2 flex flex-col items-start justify-evenly text-lg">
             <div className="flex items-center">
               <ContactRound size={26} color={mainColor} />
-              <p>Profile: {user}</p>
+              <p>Profile: {capitalFirstLetter(user)}</p>
             </div>
             <div className="flex items-center">
               <ShieldHalf size={26} color={mainColor} />
