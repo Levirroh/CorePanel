@@ -1,12 +1,13 @@
 import { PieChart } from '@mui/x-charts/PieChart';
 import { getReports } from "../../../service/mock/api/reportsService";
 import { FormControl, InputLabel, Select, MenuItem, type SelectChangeEvent } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import getActions from '../../../service/mock/api/actionsService';
 import { getActivities } from '../../../service/mock/api/activitiesService';
 import { getRecords } from '../../../service/mock/api/recordsService';
 import getUsers from '../../../service/mock/api/userService';
 import GraphItemContainer from './GraphItemContainer';
+import { Role } from '../../../data/class/enum/role';
 
 export default function ViewDataHomeContainer() {
   const reports = getReports();
@@ -76,45 +77,52 @@ export default function ViewDataHomeContainer() {
 
   // USER ROLES
   const userRolesGraph = [
-    { label: 'User', value: users.filter(x => x.role == 1).length, color: '#00C49F' },
-    { label: 'Manager', value: users.filter(x => x.role == 7).length, color: '#1667ff' },
-    { label: 'Analyst', value: users.filter(x => x.role == 8).length, color: '#ff6a6a' },
-    { label: 'Admin', value: users.filter(x => x.role == 9).length, color: '#3de0fd' },
+    { label: 'User', value: users.filter(x => x.role == Role.user).length, color: '#00C49F' },
+    { label: 'Manager', value: users.filter(x => x.role == Role.manager).length, color: '#1667ff' },
+    { label: 'Analyst', value: users.filter(x => x.role == Role.analyst).length, color: '#ff6a6a' },
+    { label: 'Admin', value: users.filter(x => x.role == Role.admin).length, color: '#3de0fd' },
   ];
 
-  const [graphType, setGraphType] = useState('');
+  const [graphType, setGraphType] = useState("reportTypes");
   const [graphPeriod, setGraphPeriod] = useState('');
   const [dataGraph, setDataGraph] = useState(reportTypesGraph);
 
-
-  const handleChangeDataVisualization = (event: SelectChangeEvent) => {
-    setGraphType(event.target.value as string);
+  useEffect(() => {
     switch (graphType) {
       case "reportTypes":
+        console.log("1")
         setDataGraph(reportTypesGraph)
         break;
       case "actionTypes":
+        console.log("2")
         setDataGraph(actionTypesGraph)
         break;
       case "activityTypes":
+        console.log("3")
         setDataGraph(activityTypesGraph)
         break;
       case "recordCategories":
+        console.log("4")
         setDataGraph(recordCategoriesGraph)
         break;
       case "reportStatus":
+        console.log("5")
         setDataGraph(reportStatusGraph)
         break;
       case "userStatus":
+        console.log("6")
         setDataGraph(userStatusGraph)
         break;
       case "userRoles":
+        console.log("7")
         setDataGraph(userRolesGraph)
         break;
       default:
+        console.log("default")
         setDataGraph(reportTypesGraph)
     }
-  };
+  }, [graphType])
+
 
   const handleChangePeriod = (event: SelectChangeEvent) => {
     setGraphPeriod(event.target.value as string);
@@ -139,7 +147,7 @@ export default function ViewDataHomeContainer() {
               id="data-visualization"
               value={graphType}
               label="Graph data visualization"
-              onChange={handleChangeDataVisualization}
+              onChange={(event) => setGraphType(event.target.value)}
             >
               <MenuItem value={"reportTypes"}>Report types</MenuItem>
               <MenuItem value={"actionTypes"}>Action types</MenuItem>
