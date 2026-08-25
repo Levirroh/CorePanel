@@ -1,7 +1,12 @@
 import { Archive, FileExclamationPoint, Home, LogOut, Users } from "lucide-react";
 import NavbarItem from "./navbarItem";
 
-export default function Navbar() {
+interface NavBarProps {
+  isActive: boolean,
+}
+
+
+export default function Navbar({isActive = true}: NavBarProps) {
 
   const pages = [
     {
