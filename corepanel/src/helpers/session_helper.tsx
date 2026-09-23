@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export function validateSession() {
+export function ValidateSession() {
   const navigate = useNavigate();
   const value = sessionStorage.getItem("acessType");
   if (value == null) {

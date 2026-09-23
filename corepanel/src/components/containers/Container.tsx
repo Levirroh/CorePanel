@@ -1,8 +1,4 @@
-export const ContainerGridLayout = {
-  full: 'lg:col-span-2',
-  default: 'col-span-1',
-};
-
+import { ContainerGridLayout } from "../../constants/ContainerGridLayout";
 
 interface PropsContainer {
   message: string,

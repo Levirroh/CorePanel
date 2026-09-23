@@ -1,13 +1,13 @@
-import { validateSession } from "../helpers/session_helper.tsx"
 import { ContactRound, Lock, ShieldHalf, User } from "lucide-react";
-import ActionsContainer from "../components/containers/ActionsContainer.tsx";
-import UsersHomeContainer from "../components/containers/UsersHomeContainer.tsx";
-import LastActionsHomeContainer from "../components/containers/LastActionsHomeContainer.tsx";
-import ViewDataHomeContainer from "../components/containers/ViewDataHomeContainer.tsx";
 import { capitalFirstLetter } from "../helpers/formater_helper.tsx";
+import { ValidateSession } from "../helpers/session_helper.tsx";
+import ActionsContainer from "../components/containers/ActionsContainer.tsx";
+import LastActionsHomeContainer from "../components/containers/LastActionsHomeContainer.tsx";
+import UsersHomeContainer from "../components/containers/UsersHomeContainer.tsx";
+import ViewDataHomeContainer from "../components/containers/ViewDataHomeContainer.tsx";
 
 export default function Home() {
-  const user = validateSession();
+  const user = ValidateSession() ?? "unknown";
   const mainColor = "forestGreen"
 
   return (

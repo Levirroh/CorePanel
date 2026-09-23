@@ -1,131 +1,272 @@
-import { PieChart } from '@mui/x-charts/PieChart';
+import { PieChart } from "@mui/x-charts/PieChart";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  type SelectChangeEvent,
+} from "@mui/material";
+import { useState } from "react";
+
 import { getReports } from "../../service/mock/api/reportsService";
-import { FormControl, InputLabel, Select, MenuItem, type SelectChangeEvent } from '@mui/material';
-import { useEffect, useState } from 'react';
-import getActions from '../../service/mock/api/actionsService';
-import { getActivities } from '../../service/mock/api/activitiesService';
-import { getRecords } from '../../service/mock/api/recordsService';
-import getUsers from '../../service/mock/api/userService';
-import GraphItemContainer from './GraphItemContainer';
-import { Role } from '../../data/class/enum/Role';
+import getActions from "../../service/mock/api/actionsService";
+import { getActivities } from "../../service/mock/api/activitiesService";
+import { getRecords } from "../../service/mock/api/recordsService";
+import getUsers from "../../service/mock/api/userService";
+
+import GraphItemContainer from "./GraphItemContainer";
+import { Role } from "../../data/class/enum/Role";
+
+type GraphDataItem = {
+  label: string;
+  value: number;
+  color: string;
+};
 
 export default function ViewDataHomeContainer() {
+  const [graphType, setGraphType] = useState("reportTypes");
+  const [graphPeriod, setGraphPeriod] = useState("");
+
   const reports = getReports();
   const actions = getActions();
   const activities = getActivities();
   const records = getRecords();
   const users = getUsers();
 
-  // REPORT TYPES
-  const reportTypesGraph = [
-    { label: 'Generated', value: reports.filter(x => x.status == 1).length, color: '#0088FE' },
-    { label: 'Processing', value: reports.filter(x => x.status == 2).length, color: '#00C49F' },
-    { label: 'Failed', value: reports.filter(x => x.status == 3).length, color: '#FF8042' },
-    { label: 'Archived', value: reports.filter(x => x.status == 4).length, color: '#FFBB28' },
+  const reportTypesGraph: GraphDataItem[] = [
+    {
+      label: "Monthly",
+      value: reports.filter((report) => report.type === 1).length,
+      color: "#0088FE",
+    },
+    {
+      label: "Users",
+      value: reports.filter((report) => report.type === 2).length,
+      color: "#00C49F",
+    },
+    {
+      label: "Records",
+      value: reports.filter((report) => report.type === 3).length,
+      color: "#FF8042",
+    },
+    {
+      label: "Financial",
+      value: reports.filter((report) => report.type === 4).length,
+      color: "#FFBB28",
+    },
+    {
+      label: "Activity",
+      value: reports.filter((report) => report.type === 5).length,
+      color: "#BD15CC",
+    },
   ];
 
-  // ACTION TYPES
-  const actionTypesGraph = [
-    { label: 'Create', value: actions.filter(x => x.action == 1).length, color: '#00C49F' },
-    { label: 'Update', value: actions.filter(x => x.action == 2).length, color: '#1667ff' },
-    { label: 'Delete', value: actions.filter(x => x.action == 3).length, color: '#ff6a6a' },
-    { label: 'Export', value: actions.filter(x => x.action == 4).length, color: '#3de0fd' },
-    { label: 'Login', value: actions.filter(x => x.action == 5).length, color: '#369200' },
-    { label: 'Logout', value: actions.filter(x => x.action == 6).length, color: '#e47900' },
-    { label: 'Generate Report', value: actions.filter(x => x.action == 7).length, color: '#bd15cc' },
-    { label: 'Change Permission', value: actions.filter(x => x.action == 8).length, color: '#3fff2e' },
+  const actionTypesGraph: GraphDataItem[] = [
+    {
+      label: "Create",
+      value: actions.filter((action) => action.action === 1).length,
+      color: "#00C49F",
+    },
+    {
+      label: "Update",
+      value: actions.filter((action) => action.action === 2).length,
+      color: "#1667FF",
+    },
+    {
+      label: "Delete",
+      value: actions.filter((action) => action.action === 3).length,
+      color: "#FF6A6A",
+    },
+    {
+      label: "Export",
+      value: actions.filter((action) => action.action === 4).length,
+      color: "#3DE0FD",
+    },
+    {
+      label: "Login",
+      value: actions.filter((action) => action.action === 5).length,
+      color: "#369200",
+    },
+    {
+      label: "Logout",
+      value: actions.filter((action) => action.action === 6).length,
+      color: "#E47900",
+    },
+    {
+      label: "Generate Report",
+      value: actions.filter((action) => action.action === 7).length,
+      color: "#BD15CC",
+    },
+    {
+      label: "Change Permission",
+      value: actions.filter((action) => action.action === 8).length,
+      color: "#3FFF2E",
+    },
   ];
 
-  // ACTIVITY TYPES
-  const activityTypesGraph = [
-    { label: 'Create', value: activities.filter(x => x.type == 1).length, color: '#00C49F' },
-    { label: 'Update', value: activities.filter(x => x.type == 2).length, color: '#1667ff' },
-    { label: 'Delete', value: activities.filter(x => x.type == 3).length, color: '#ff6a6a' },
-    { label: 'Export', value: activities.filter(x => x.type == 4).length, color: '#3de0fd' },
-    { label: 'Login', value: activities.filter(x => x.type == 5).length, color: '#369200' },
-    { label: 'Logout', value: activities.filter(x => x.type == 6).length, color: '#e47900' },
-    { label: 'Generate Report', value: activities.filter(x => x.type == 7).length, color: '#bd15cc' },
-    { label: 'Change Permission', value: activities.filter(x => x.type == 8).length, color: '#3fff2e' },
+  const activityTypesGraph: GraphDataItem[] = [
+    {
+      label: "User Created",
+      value: activities.filter((activity) => activity.type === 1).length,
+      color: "#00C49F",
+    },
+    {
+      label: "User Updated",
+      value: activities.filter((activity) => activity.type === 2).length,
+      color: "#1667FF",
+    },
+    {
+      label: "Report Generated",
+      value: activities.filter((activity) => activity.type === 3).length,
+      color: "#FF6A6A",
+    },
+    {
+      label: "Record Created",
+      value: activities.filter((activity) => activity.type === 4).length,
+      color: "#3DE0FD",
+    },
+    {
+      label: "Permission Changed",
+      value: activities.filter((activity) => activity.type === 5).length,
+      color: "#369200",
+    },
+    {
+      label: "Login",
+      value: activities.filter((activity) => activity.type === 6).length,
+      color: "#E47900",
+    },
+    {
+      label: "Logout",
+      value: activities.filter((activity) => activity.type === 7).length,
+      color: "#BD15CC",
+    },
+    {
+      label: "System Alert",
+      value: activities.filter((activity) => activity.type === 8).length,
+      color: "#3FFF2E",
+    },
   ];
 
-
-  // RECORD CATEGORIES
-  const recordCategoriesGraph = [
-    { label: 'Finance', value: records.filter(x => x.category == 1).length, color: '#00C49F' },
-    { label: 'Inventory', value: records.filter(x => x.category == 2).length, color: '#1667ff' },
-    { label: 'Customer', value: records.filter(x => x.category == 3).length, color: '#ff6a6a' },
-    { label: 'Operation', value: records.filter(x => x.category == 4).length, color: '#3de0fd' },
-    { label: 'Internal', value: records.filter(x => x.category == 5).length, color: '#369200' },
+  const recordCategoriesGraph: GraphDataItem[] = [
+    {
+      label: "Finance",
+      value: records.filter((record) => record.category === 1).length,
+      color: "#00C49F",
+    },
+    {
+      label: "Inventory",
+      value: records.filter((record) => record.category === 2).length,
+      color: "#1667FF",
+    },
+    {
+      label: "Customer",
+      value: records.filter((record) => record.category === 3).length,
+      color: "#FF6A6A",
+    },
+    {
+      label: "Operation",
+      value: records.filter((record) => record.category === 4).length,
+      color: "#3DE0FD",
+    },
+    {
+      label: "Internal",
+      value: records.filter((record) => record.category === 5).length,
+      color: "#369200",
+    },
   ];
 
-
-  // REPORT STATUS
-  const reportStatusGraph = [
-    { label: 'Generated', value: reports.filter(x => x.status == 1).length, color: '#00C49F' },
-    { label: 'Processing', value: records.filter(x => x.status == 2).length, color: '#1667ff' },
-    { label: 'Failed', value: records.filter(x => x.status == 3).length, color: '#ff6a6a' },
-    { label: 'Archived', value: records.filter(x => x.status == 4).length, color: '#3de0fd' },
+  const reportStatusGraph: GraphDataItem[] = [
+    {
+      label: "Generated",
+      value: reports.filter((report) => report.status === 1).length,
+      color: "#00C49F",
+    },
+    {
+      label: "Processing",
+      value: reports.filter((report) => report.status === 2).length,
+      color: "#1667FF",
+    },
+    {
+      label: "Failed",
+      value: reports.filter((report) => report.status === 3).length,
+      color: "#FF6A6A",
+    },
+    {
+      label: "Archived",
+      value: reports.filter((report) => report.status === 4).length,
+      color: "#3DE0FD",
+    },
   ];
 
-  // USER STATUS
-  const userStatusGraph = [
-    { label: 'Inactive', value: users.filter(x => x.status == 0).length, color: '#00C49F' },
-    { label: 'Active', value: users.filter(x => x.status == 1).length, color: '#1667ff' },
-    { label: 'Pending', value: users.filter(x => x.status == 2).length, color: '#ff6a6a' },
-    { label: 'Blocked', value: users.filter(x => x.status == 3).length, color: '#3de0fd' },
+  const userStatusGraph: GraphDataItem[] = [
+    {
+      label: "Inactive",
+      value: users.filter((user) => user.status === 0).length,
+      color: "#00C49F",
+    },
+    {
+      label: "Active",
+      value: users.filter((user) => user.status === 1).length,
+      color: "#1667FF",
+    },
+    {
+      label: "Pending",
+      value: users.filter((user) => user.status === 2).length,
+      color: "#FF6A6A",
+    },
+    {
+      label: "Blocked",
+      value: users.filter((user) => user.status === 3).length,
+      color: "#3DE0FD",
+    },
   ];
 
-  // USER ROLES
-  const userRolesGraph = [
-    { label: 'User', value: users.filter(x => x.role == Role.user).length, color: '#00C49F' },
-    { label: 'Manager', value: users.filter(x => x.role == Role.manager).length, color: '#1667ff' },
-    { label: 'Analyst', value: users.filter(x => x.role == Role.analyst).length, color: '#ff6a6a' },
-    { label: 'Admin', value: users.filter(x => x.role == Role.admin).length, color: '#3de0fd' },
+  const userRolesGraph: GraphDataItem[] = [
+    {
+      label: "User",
+      value: users.filter((user) => user.role === Role.user).length,
+      color: "#00C49F",
+    },
+    {
+      label: "Manager",
+      value: users.filter((user) => user.role === Role.manager).length,
+      color: "#1667FF",
+    },
+    {
+      label: "Analyst",
+      value: users.filter((user) => user.role === Role.analyst).length,
+      color: "#FF6A6A",
+    },
+    {
+      label: "Admin",
+      value: users.filter((user) => user.role === Role.admin).length,
+      color: "#3DE0FD",
+    },
   ];
 
-  const [graphType, setGraphType] = useState("reportTypes");
-  const [graphPeriod, setGraphPeriod] = useState('');
-  const [dataGraph, setDataGraph] = useState(reportTypesGraph);
+  const graphDataByType: Record<string, GraphDataItem[]> = {
+    reportTypes: reportTypesGraph,
+    actionTypes: actionTypesGraph,
+    activityTypes: activityTypesGraph,
+    recordCategories: recordCategoriesGraph,
+    reportStatus: reportStatusGraph,
+    userStatus: userStatusGraph,
+    userRoles: userRolesGraph,
+  };
 
-  useEffect(() => {
-    switch (graphType) {
-      case "reportTypes":
-        console.log("1")
-        setDataGraph(reportTypesGraph)
-        break;
-      case "actionTypes":
-        console.log("2")
-        setDataGraph(actionTypesGraph)
-        break;
-      case "activityTypes":
-        console.log("3")
-        setDataGraph(activityTypesGraph)
-        break;
-      case "recordCategories":
-        console.log("4")
-        setDataGraph(recordCategoriesGraph)
-        break;
-      case "reportStatus":
-        console.log("5")
-        setDataGraph(reportStatusGraph)
-        break;
-      case "userStatus":
-        console.log("6")
-        setDataGraph(userStatusGraph)
-        break;
-      case "userRoles":
-        console.log("7")
-        setDataGraph(userRolesGraph)
-        break;
-      default:
-        console.log("default")
-        setDataGraph(reportTypesGraph)
-    }
-  }, [graphType])
+  const dataGraph = graphDataByType[graphType] ?? reportTypesGraph;
 
+  const totalGraphValue = dataGraph.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.value,
+    0,
+  );
+
+  const handleChangeGraphType = (event: SelectChangeEvent) => {
+    setGraphType(event.target.value);
+  };
 
   const handleChangePeriod = (event: SelectChangeEvent) => {
-    setGraphPeriod(event.target.value as string);
+    setGraphPeriod(event.target.value);
   };
 
   const settings = {
@@ -136,82 +277,88 @@ export default function ViewDataHomeContainer() {
   };
 
   return (
-    <div className={`flex flex-col gap-2 h-full`}>
-      <div className='flex justify-between w-full'>
+    <div className="flex h-full flex-col gap-2">
+      <div className="flex w-full justify-between">
         <p>View Data</p>
-        <div className='flex justify-evenly gap-4 w-3/4'>
-          <FormControl className='w-full'>
-            <InputLabel id="data-visualization-label">Graph data visualization</InputLabel>
+
+        <div className="flex w-3/4 justify-evenly gap-4">
+          <FormControl className="w-full">
+            <InputLabel id="data-visualization-label">
+              Graph data visualization
+            </InputLabel>
+
             <Select
-              labelId="data-visualization"
+              labelId="data-visualization-label"
               id="data-visualization"
               value={graphType}
               label="Graph data visualization"
-              onChange={(event) => setGraphType(event.target.value)}
+              onChange={handleChangeGraphType}
             >
-              <MenuItem value={"reportTypes"}>Report types</MenuItem>
-              <MenuItem value={"actionTypes"}>Action types</MenuItem>
-              <MenuItem value={"activityTypes"}>Activity types</MenuItem>
-              <MenuItem value={"recordCategories"}>Record Categories</MenuItem>
-              <MenuItem value={"reportStatus"}>Report Status</MenuItem>
-              <MenuItem value={"userStatus"}>User Status</MenuItem>
-              <MenuItem value={"userRoles"}>User Roles</MenuItem>
+              <MenuItem value="reportTypes">Report types</MenuItem>
+              <MenuItem value="actionTypes">Action types</MenuItem>
+              <MenuItem value="activityTypes">Activity types</MenuItem>
+              <MenuItem value="recordCategories">Record categories</MenuItem>
+              <MenuItem value="reportStatus">Report status</MenuItem>
+              <MenuItem value="userStatus">User status</MenuItem>
+              <MenuItem value="userRoles">User roles</MenuItem>
             </Select>
           </FormControl>
-          <FormControl className='w-1/3'>
+
+          <FormControl className="w-1/3">
             <InputLabel id="data-period-label">Data Period</InputLabel>
+
             <Select
-              labelId="data-period"
+              labelId="data-period-label"
               id="data-period"
               value={graphPeriod}
               label="Data Period"
               onChange={handleChangePeriod}
             >
-              <MenuItem value={"today"}>Today</MenuItem>
-              <MenuItem value={"week"}>This week</MenuItem>
-              <MenuItem value={"month"}>This month</MenuItem>
-              <MenuItem value={"year"}>This year</MenuItem>
+              <MenuItem value="today">Today</MenuItem>
+              <MenuItem value="week">This week</MenuItem>
+              <MenuItem value="month">This month</MenuItem>
+              <MenuItem value="year">This year</MenuItem>
             </Select>
           </FormControl>
         </div>
       </div>
-      <div className='h-full w-full flex items-center'>
-        <div className='w-full flex'>
-          <PieChart series={[
-            {
-              data: [...dataGraph],
-              innerRadius: 50,
-              outerRadius: 100,
-              paddingAngle: 3,
-              cornerRadius: 8,
-              startAngle: 0,
-              endAngle: 360,
-              cx: 95,
-              cy: 95,
-            }
-          ]}
+
+      <div className="flex h-full w-full items-center">
+        <div className="flex w-full">
+          <PieChart
+            series={[
+              {
+                data: dataGraph,
+                innerRadius: 50,
+                outerRadius: 100,
+                paddingAngle: 3,
+                cornerRadius: 8,
+                startAngle: 0,
+                endAngle: 360,
+                cx: 95,
+                cy: 95,
+              },
+            ]}
             {...settings}
           />
         </div>
-        <div className='w-full flex flex-col gap-2'>
+
+        <div className="flex w-full flex-col gap-2">
           {dataGraph.map((item) => (
-            <div>
-              <GraphItemContainer item={item} total={dataGraph.reduce((accumulator, currentValue) => accumulator += currentValue.value, 0)} />
-            </div>
+            <GraphItemContainer
+              key={item.label}
+              item={item}
+              total={totalGraphValue}
+            />
           ))}
         </div>
-
       </div>
 
       <div>
-        <p>quick actions on graph (change parameter, see other characteristics</p>
-        {/* Maybe you select only the type (report, action, etc.) and then you select here for type, category, etc. */}
+        <p>
+          quick actions on graph (change parameter, see other characteristics)
+        </p>
       </div>
     </div>
   );
 }
-
-/*
-Other notes: 
-- When hovering right menu, make the respective data hover too
-*/
