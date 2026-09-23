@@ -1,6 +1,6 @@
-import type { File_type } from "./enum/file_type";
-import type { Report_status } from "./enum/report_status";
-import type { Report_type } from "./enum/report_type";
+import type { File_type } from "./enum/FileType";
+import type { Report_status } from "./enum/ReportStatus";
+import type { Report_type } from "./enum/ReportType";
 
 export interface IReport {
   id: number,

@@ -1,13 +1,13 @@
 import { PieChart } from '@mui/x-charts/PieChart';
-import { getReports } from "../../../service/mock/api/reportsService";
+import { getReports } from "../../service/mock/api/reportsService";
 import { FormControl, InputLabel, Select, MenuItem, type SelectChangeEvent } from '@mui/material';
 import { useEffect, useState } from 'react';
-import getActions from '../../../service/mock/api/actionsService';
-import { getActivities } from '../../../service/mock/api/activitiesService';
-import { getRecords } from '../../../service/mock/api/recordsService';
-import getUsers from '../../../service/mock/api/userService';
+import getActions from '../../service/mock/api/actionsService';
+import { getActivities } from '../../service/mock/api/activitiesService';
+import { getRecords } from '../../service/mock/api/recordsService';
+import getUsers from '../../service/mock/api/userService';
 import GraphItemContainer from './GraphItemContainer';
-import { Role } from '../../../data/class/enum/role';
+import { Role } from '../../data/class/enum/Role';
 
 export default function ViewDataHomeContainer() {
   const reports = getReports();

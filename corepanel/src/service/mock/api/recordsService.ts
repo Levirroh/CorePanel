@@ -1,4 +1,4 @@
-import type { IRecords } from "../../../data/class/record";
+import type { IRecords } from "../../../data/class/Record";
 import recordsJson from "../../../data/database/records.json";
 
 export function getRecords(): IRecords[] {

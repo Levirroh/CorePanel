@@ -1,7 +1,7 @@
 import { SquareArrowRightExit } from "lucide-react";
-import type { IActions } from "../../../data/class/action";
-import type { IUser } from "../../../data/class/user";
-import { formatDate } from "../../../helpers/formater_helper";
+import type { IActions } from "../../data/class/Action";
+import type { IUser } from "../../data/class/User";
+import { formatDate } from "../../helpers/formater_helper";
 
 interface LastActionsProps {
   action: IActions,

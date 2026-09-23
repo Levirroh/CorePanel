@@ -1,4 +1,4 @@
-import type { Action_type } from "./enum/action_type";
+import type { Action_type } from "./enum/ActionType";
 import type { Severity } from "./enum/severity";
 
 export interface IActivity {

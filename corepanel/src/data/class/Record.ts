@@ -1,5 +1,5 @@
-import type { Record_category } from "./enum/record_category";
-import type { Record_status } from "./enum/record_status";
+import type { Record_category } from "./enum/RecordCategory";
+import type { Record_status } from "./enum/RecordStatus";
 
 export interface IRecords {
   id: number,

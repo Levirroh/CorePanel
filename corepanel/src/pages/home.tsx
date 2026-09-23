@@ -1,9 +1,9 @@
 import { validateSession } from "../helpers/session_helper.tsx"
 import { ContactRound, Lock, ShieldHalf, User } from "lucide-react";
-import ActionsContainer from "../assets/components/containers/actionsContainer.tsx";
-import UsersHomeContainer from "../assets/components/containers/usersHomeContainer.tsx";
-import LastActionsHomeContainer from "../assets/components/containers/lastActionsHomeContainer.tsx";
-import ViewDataHomeContainer from "../assets/components/containers/viewDataHomeContainer.tsx";
+import ActionsContainer from "../components/containers/ActionsContainer.tsx";
+import UsersHomeContainer from "../components/containers/UsersHomeContainer.tsx";
+import LastActionsHomeContainer from "../components/containers/LastActionsHomeContainer.tsx";
+import ViewDataHomeContainer from "../components/containers/ViewDataHomeContainer.tsx";
 import { capitalFirstLetter } from "../helpers/formater_helper.tsx";
 
 export default function Home() {

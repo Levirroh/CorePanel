@@ -1,4 +1,4 @@
-import type { IActions } from "../../../data/class/action";
+import type { IActions } from "../../../data/class/Action";
 import actionsJson from "../../../data/database/actions.json";
 
 export default function getActions(): IActions[] {

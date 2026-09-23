@@ -1,6 +1,6 @@
 import type { Actions } from "./enum/actions";
 import type { Result } from "./enum/result";
-import type { Target_type } from "./enum/target_type";
+import type { Target_type } from "./enum/TargetType";
 
 export interface IActions {
   id: number,

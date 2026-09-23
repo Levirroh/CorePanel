@@ -1,4 +1,4 @@
-import type { IReport } from "../../../data/class/report";
+import type { IReport } from "../../../data/class/Report";
 import reportsJson from "../../../data/database/reports.json";
 
 export function getReports(): IReport[] {

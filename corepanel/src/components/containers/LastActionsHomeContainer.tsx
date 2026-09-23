@@ -1,6 +1,6 @@
+import actionService  from "../../service/mock/api/actionsService";
+import userService  from "../../service/mock/api/userService";
 import LastActionsContainer from "./lastActionsContainer";
-import actionService  from "../../../service/mock/api/actionsService";
-import userService  from "../../../service/mock/api/userService";
 
 export default function LastActionsHomeContainer() {
 

@@ -1,8 +1,8 @@
-import { Role } from "../../../data/class/enum/role";
-import type { IUser } from "../../../data/class/user";
-import { capitalFirstLetter, formatDate } from "../../../helpers/formater_helper";
-import { getUserImage } from "../../../helpers/path_helper";
-import UserPictureContainer from "./userPictureContainer"
+import { Role } from "../../data/class/enum/Role";
+import type { IUser } from "../../data/class/User";
+import { capitalFirstLetter, formatDate } from "../../helpers/formater_helper";
+import { getUserImage } from "../../helpers/path_helper";
+import UserPictureContainer from "./userPictureContainer";
 
 interface UserProp {
   user: IUser

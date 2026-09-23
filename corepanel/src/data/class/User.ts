@@ -1,5 +1,5 @@
-import type { Role } from "./enum/role";
-import type { User_status } from "./enum/user_status";
+import type { Role } from "./enum/Role";
+import type { User_status } from "./enum/UserStatus";
 
 export interface IUser {
   id: number,

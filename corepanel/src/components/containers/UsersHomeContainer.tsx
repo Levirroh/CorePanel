@@ -1,5 +1,5 @@
-import UserContainer from "./userContainer"
-import userService from "../../../service/mock/api/userService"
+import userService from "../../service/mock/api/userService"
+import UserContainer from "./userContainer";
 
 export default function UsersHomeContainer() {
 

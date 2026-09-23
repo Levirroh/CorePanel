@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../assets/components/navbar.tsx";
+import Navbar from "../components/Navbar.tsx";
 
 
 export default function Interface() {
