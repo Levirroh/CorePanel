@@ -1,5 +1,5 @@
-import type { Actions } from "./enum/actions";
-import type { Result } from "./enum/result";
+import type { Actions } from "./enum/Actions";
+import type { Result } from "./enum/Result";
 import type { Target_type } from "./enum/TargetType";
 
 export interface IActions {

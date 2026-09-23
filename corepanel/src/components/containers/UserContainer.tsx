@@ -2,7 +2,7 @@ import { Role } from "../../data/class/enum/Role";
 import type { IUser } from "../../data/class/User";
 import { capitalFirstLetter, formatDate } from "../../helpers/formater_helper";
 import { getUserImage } from "../../helpers/path_helper";
-import UserPictureContainer from "./userPictureContainer";
+import UserPictureContainer from "./UserPictureContainer";
 
 interface UserProp {
   user: IUser

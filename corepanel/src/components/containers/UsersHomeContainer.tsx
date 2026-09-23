@@ -1,5 +1,5 @@
 import userService from "../../service/mock/api/userService"
-import UserContainer from "./userContainer";
+import UserContainer from "./UserContainer";
 
 export default function UsersHomeContainer() {
 

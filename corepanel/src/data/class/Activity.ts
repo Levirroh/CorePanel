@@ -1,5 +1,5 @@
 import type { Action_type } from "./enum/ActionType";
-import type { Severity } from "./enum/severity";
+import type { Severity } from "./enum/Severity";
 
 export interface IActivity {
   id: number,
