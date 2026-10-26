@@ -1,5 +1,20 @@
 # CorePanel
 
+Iniciando o projeto:
+
+```
+cd corepanel
+npm ci
+npm run dev
+```
+
+Comandos de Validação:
+
+```
+npm run lint
+npm run build
+```
+
 ## Tags
 
 `Frontend Only` `React` `TypeScript` `Tailwind CSS` `Dashboard`
