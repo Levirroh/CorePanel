@@ -1,0 +1,50 @@
+
+name: Defeito
+description: Relate um erro encontrado no CorePanel
+title: "fix: "
+labels: ["defeito"]
+
+body:
+  - type: input
+    id: ambiente
+    attributes:
+      label: Versão / ambiente
+      description: Informe onde o problema ocorreu.
+      placeholder: "Ex.: Local, staging ou production"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: Explique o comportamento inesperado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Acessar a página...
+        2. Clicar em...
+        3. Observar o erro...
+    validations:
+      required: true
+
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado esperado x obtido
+      description: Descreva o comportamento esperado e o que aconteceu.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências adicionais
+      description: Inclua prints, mensagens de erro ou logs, se disponíveis.
+    validations:
+      required: false
