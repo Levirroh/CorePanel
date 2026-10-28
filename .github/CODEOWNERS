@@ -1,0 +1,13 @@
+# Responsáveis por itens de configuração do CorePanel
+# PGC - Papéis e revisão de alterações
+
+# Configurações e workflows do GitHub
+/.github/                   @Levirroh
+
+# Gerenciamento de dependências
+/corepanel/package.json     @Levirroh
+/corepanel/package-lock.json @Levirroh
+
+# Configurações do projeto
+/corepanel/vite.config.ts   @Levirroh
+/corepanel/eslint.config.js @Levirroh

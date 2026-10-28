@@ -1,0 +1,47 @@
+
+name: Funcionalidade
+description: Proponha uma nova funcionalidade ou melhoria
+title: "feat: "
+labels: ["funcionalidade"]
+
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema ou necessidade
+      description: Qual problema esta funcionalidade resolve?
+      placeholder: Descreva a necessidade identificada.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Solução proposta
+      description: Explique como a funcionalidade deve funcionar.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      placeholder: |
+        - [ ] O usuário consegue...
+        - [ ] O sistema apresenta...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área do projeto
+      options:
+        - Dashboard
+        - Componentes e interface
+        - Páginas e navegação
+        - Dados e serviços mockados
+        - Estilos e responsividade
+        - Configuração e CI
+    validations:
+      required: true
