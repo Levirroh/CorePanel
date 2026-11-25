@@ -344,7 +344,7 @@ export default function ViewDataHomeContainer() {
         </div>
 
         <div className="flex w-full flex-col gap-2">
-          {dataGraph.map((item) => (
+          {dataGraph.slice(0, 5).map((item) => (
             <GraphItemContainer
               key={item.label}
               item={item}
