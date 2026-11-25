@@ -18,5 +18,15 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    rules: {
+      "no-restricted-syntax": [
+        "error",
+        {
+          // Bloqueia chamar .map() direto em `dataGraph` sem fatiar antes
+          selector: "CallExpression[callee.object.name='dataGraph'][callee.property.name='map']",
+          message: "Use `dataGraph.slice(0, 5).map(...)` para garantir o limite máximo de 5 itens renderizados.",
+        },
+      ],
+    },
   },
 ])
